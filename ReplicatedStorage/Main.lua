@@ -42,7 +42,7 @@ function framework.Init()
 	self.HRP = self.Character:WaitForChild('HumanoidRootPart') :: Part
 	
 	self.Parameter = RaycastParams.new()
-	self.Parameter.FilterDescendantsInstances = {workspace.Camera , self.Character , workspace.BullletHole}
+	self.Parameter.FilterDescendantsInstances = {workspace.Camera , self.Character , workspace.BulletHole}
 	self.Parameter.FilterType = Enum.RaycastFilterType.Exclude
 	self.Parameter.IgnoreWater = true
 	
@@ -221,7 +221,7 @@ function framework:Fire()
 				end
 				
 				if not humanoid then
-					local bulletHole = Instance.new('Part' , workspace.BullletHole or workspace)
+					local bulletHole = Instance.new('Part' , workspace.BulletHole or workspace)
 					bulletHole.Color = Color3.fromRGB(0,0,0)
 					bulletHole.CFrame = CFrame.new(temp.Position , temp.Position - temp.Normal)
 					bulletHole.Anchored = true
