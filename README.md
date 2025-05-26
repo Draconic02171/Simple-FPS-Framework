@@ -1,9 +1,8 @@
---[[
 
 # Simple FPS
 
----=== Simple FPS Framework ===---
---------- by Draconic02171 ---------
+Simple FPS Framework
+by Draconic02171
 
 Thank you for checking out the **Simple FPS Framework**!
 
@@ -33,4 +32,3 @@ Stay updated or get in touch through my socials:
 - Discord: `draconic_nate`
 
 Happy developing!
-]]--
