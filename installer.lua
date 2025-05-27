@@ -7,6 +7,7 @@ codes.Utill = 'https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framew
 codes.Services = 'https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framework/refs/heads/main/ReplicatedStorage/services.lua'
 codes.Loader = 'https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framework/refs/heads/main/Cilent/Loader.lua'
 codes.ServerHandler = 'https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framework/refs/heads/main/Server/ServerHandler.lua'
+codes.CreditsText = 'https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framework/refs/heads/main/CreditCilent.txt'
 
 local Sounds = {
 	HSHitMarker = 'rbxassetid://4817809188',
@@ -39,10 +40,9 @@ local DumpedFolder = Instance.new('Folder' , workspace)
 DumpedFolder.Name = 'Dumped'
 
 
-
 local Main = Instance.new('ModuleScript' , FrameworkFolder)
 Main.Name = 'Main'
-Main:SetAttribute('framework' , 'smth')
+Main:SetAttribute('framework' , codes.CreditsText)
 Main.Source = Http:GetAsync(codes.Main)
 
 local Utillities = Instance.new('ModuleScript' , modulesFolder)
