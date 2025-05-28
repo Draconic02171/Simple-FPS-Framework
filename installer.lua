@@ -90,7 +90,8 @@ KillFeedSound.Name = 'KillFeedSound'
 KillFeedSound.SoundId = Sounds.KillFeedSound
 
 do
-	local Gui = Insert:LoadAsset(134092705649919)
+	local Gui = Insert:LoadAsset(134092705649919) :: Model
+	Gui = Gui:WaitForChild('Model')
 	Gui = Gui:FindFirstChildOfClass('ScreenGui')
 	if not Gui then warn('Failed to load a WeaponGui') end
 	Gui.Parent = game.StarterGui
@@ -110,6 +111,7 @@ end
 warn("Finished Installing Draconic's Simple FPS Framework")
 
 local GreetingsGui = Insert:LoadAsset(97968998172726)
+GreetingsGui = GreetingsGui:WaitForChild('Model')
 GreetingsGui = GreetingsGui:FindFirstChildOfClass('ScreenGui')
 if not GreetingsGui then warn('Failed to load a Greetings Gui') return end
 
