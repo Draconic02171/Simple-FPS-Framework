@@ -198,7 +198,7 @@ task.wait(2)
 
 game.TweenService:Create(
 	Frame ,
-	TweenInfo.new(2 , Enum.EasingStyle.Quad , Enum.EasingDirection.InOut) ,
+	TweenInfo.new(1.1 , Enum.EasingStyle.Quad , Enum.EasingDirection.InOut) ,
 	{BackgroundColor3 = Color3.fromRGB(0, 19, 43)}
 ):Play()
 
