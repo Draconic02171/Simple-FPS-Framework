@@ -14,14 +14,13 @@ who wants a simple shooting system for your map.
 This project is open-source under the **MIT License**.
 
 You are free to use, modify, and distribute this framework
-even for commercial projects
-provided that you include the original copyright.
+even for commercial projects provided that
+you include the original copyright.
 
 * 📄 [MIT License File](LICENSE)
 * 📘 [Read Full MIT License]
 (https://opensource.org/licenses/MIT)
 
----
 
 📱 **Connect With Me**
 
