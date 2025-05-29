@@ -251,7 +251,7 @@ GreetingsGui.IgnoreGuiInset  = true
 
 local Frame = Instance.new('Frame' , GreetingsGui)
 Frame.AnchorPoint = Vector2.new(0.5 ,0.5)
-Frame.Position = UDim2.fromScale(0.5 , 0.5)
+Frame.Position = UDim2.fromScale(1.5 , 1.5)
 Frame.Size = UDim2.fromScale(1 , 0.8)
 Frame.SizeConstraint = Enum.SizeConstraint.RelativeYY
 Frame.ZIndex = 1
