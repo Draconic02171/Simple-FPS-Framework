@@ -33,12 +33,16 @@ GunsFolder.Name = 'Guns'
 local SoundsFolder = Instance.new('Folder' , AssetsFolder)
 SoundsFolder.Name = 'Sounds'
 
-local BulletHole = Instance.new('Folder' , workspace)
-BulletHole.Name = 'BulletHole'
+if not workspace:FindFirstChild('BulletHole') then
+	local BulletHole = Instance.new('Folder' , workspace)
+	BulletHole.Name = 'BulletHole'
+end
 
-local DumpedFolder = Instance.new('Folder' , workspace)
-DumpedFolder.Name = 'Dumped'
+if not workspace:FindFirstChild('Dumped') then
+	local DumpedFolder = Instance.new('Folder' , workspace)
+	DumpedFolder.Name = 'Dumped'
 
+end
 
 local Main = Instance.new('ModuleScript' , FrameworkFolder)
 Main.Name = 'Main'
