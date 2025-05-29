@@ -139,10 +139,12 @@ MadeBy.Visible = false
 ScrollFrame.Visible = false
 
 Frame.Position = UDim2.new(0.5 , 0 , 2 , 0)
+Frame.BackgroundColor3 = Color3.fromRGB(0, 72, 161)
 
 Logo.Position = UDim2.new(0.5 , 0 , 0.5 , 0)
 Logo.Size = UDim2.new(0.8 , 0 , 0.8 , 0)
 Logo.ImageTransparency = 1
+
 
 
 game.TweenService:Create(
@@ -195,6 +197,12 @@ game.TweenService:Create(
 task.wait(2)
 
 game.TweenService:Create(
+	Frame ,
+	TweenInfo.new(2.5 , Enum.EasingStyle.Quad , Enum.EasingDirection.InOut) ,
+	{BackgroundColor3 = Color3.fromRGB(0, 19, 43)}
+):Play()
+
+game.TweenService:Create(
 	BigText ,
 	TweenInfo.new(1 , Enum.EasingStyle.Quint , Enum.EasingDirection.Out) ,
 	{Position = UDim2.new(0.672, 0, 0.12, 0) , TextTransparency = 0}
@@ -214,7 +222,6 @@ game.TweenService:Create(
 	TweenInfo.new(1 , Enum.EasingStyle.Quint , Enum.EasingDirection.Out) ,
 	{Position = UDim2.new(0.456, 0, 0.217, 0)}
 ):Play()
-
 
 CloseButton.MouseButton1Click:Once(function()
 	GreetingsGui:Destroy()
