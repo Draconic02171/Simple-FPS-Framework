@@ -1,0 +1,54 @@
+local config = {}
+
+-- Fire Settings
+config.FireMode           = "single"     -- Options: 'single', 'auto'
+config.FireRate           = 150          -- Rounds per minute
+config.BulletPerShot      = 1
+config.CanBeRechamber     = false        -- For pump-action or bolt-action weapons
+config.ReChamberTime      = 0.3          -- Time to rechamber (in seconds)
+
+-- Damage Settings
+config.Damage             = 45
+config.HeadShotMultiply   = 2            -- Multiplier for headshots
+
+-- Ammo Settings
+config.AmmoPerMag         = 7
+config.MagCount           = 4			 -- Not Implemented yet
+
+-- Accuracy & Handling
+config.MinSpread          = 0
+config.MaxSpread          = 2
+config.Handling           = 1			 -- Higher value means the more inaccuracy
+config.Recovering         = 7            -- Spread recovery rate
+
+-- Equip & Reload
+config.EquipTime          = 0.2
+config.ModelEquipingSpeed = 20
+config.ReloadTime         = 1.5
+
+-- Recoil & Fire Animation (CFrame)
+--------------------------------------------------------------------------------------
+
+-- the Recoil for the weapon
+config.ModelRecoil = CFrame.new(
+	0,        -- Left/Right
+	0.05,     -- Up/Down
+	0.2       -- Backwards
+) * CFrame.Angles(
+	math.rad(5),   -- Pitch (Up/Down)
+	math.rad(0),   -- Yaw (Left/Right)
+	math.rad(0)    -- Roll (Tilt)
+)
+
+-- the firing CFrame for the weapon
+config.FireCFrame = CFrame.new(
+	0,        -- Left/Right
+	0,        -- Up/Down
+	0.3       -- Backwards
+) * CFrame.Angles(
+	math.rad(15),  -- Pitch (Up/Down)
+	math.rad(0),   -- Yaw (Left/Right)
+	math.rad(0)    -- Roll (Tilt)
+)
+
+return config
