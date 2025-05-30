@@ -38,7 +38,7 @@ To use this code : Copy this code and then paste it in the Command Bar in Roblox
 
 Stay updated or get in touch through my socials:
 
-- YouTube: [https://www.youtube.com/@draconic_lilly](https://www.youtube.com/@draconic_lilly)  
+- YouTube: [Draconic](https://www.youtube.com/@draconic_lilly)  
 - Discord: `draconic_nate`
 
 Happy developing!
