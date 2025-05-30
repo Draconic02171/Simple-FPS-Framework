@@ -22,6 +22,16 @@ You are free to use, modify, and distribute this framework — even for commerci
 * 📄 [MIT License File](LICENSE)
 * 📘 [Read Full MIT License](https://opensource.org/licenses/MIT)
 
+## Install
+Here is a installer code
+```lua
+game.HttpService.HttpEnabled = true
+local install,_ = loadstring(game.HttpService:GetAsync('https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framework/refs/heads/main/installer.lua'))  
+install()
+game.HttpService.HttpEnabled = false
+```
+To use this code : Copy this code and then paste it in the Command Bar in Roblox studio and Hit enter and you'll good to go
+
 ---
 
 📱 **Connect With Me**
