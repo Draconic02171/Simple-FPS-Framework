@@ -232,19 +232,403 @@ do
 end
 
 do
-	local SimpleGunTemplate = Insert:LoadAsset(83945224178966)
-	SimpleGunTemplate = SimpleGunTemplate:FindFirstChildOfClass('Model')
-	if not SimpleGunTemplate then warn('Failed to load a TemplateGun') return end
-	SimpleGunTemplate.Parent = GunsFolder
+	local Parts = {} 
+	local Model = Instance.new('Model' , GunsFolder)
+	Model.Name = 'Pistol'
+	Model:PivotTo(CFrame.new(0,0,0))
+	local Current = 'Root'
+	
+	local StarterGun = Instance.new('Tool' , game.StarterPack)
+	StarterGun.Name = 'Pistol'
 
-	local TemplateTool = Instance.new('Tool' , game.StarterPack)
-	TemplateTool.Name = SimpleGunTemplate.Name
-	TemplateTool:AddTag('FPSWeapon')
+	Parts.Root = nil
+
+	Parts[Current] = Instance.new('Part' , Model)
+	Parts[Current].Name = Current
+	Parts[Current].Size = Vector3.new(1,1,1)
+	Parts[Current].CFrame = CFrame.new(0,0,0)
+	Parts[Current].CanCollide = false
+	Parts[Current].Anchored = true
+	Parts[Current].Transparency = 1
+	Model.PrimaryPart = Parts[Current]
+
+	do
+		Current = 'Body'
+		Parts[Current] = Instance.new('Part' , Model)
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.4, 2.5, 0.1)
+		Parts[Current].CFrame = CFrame.new(0, 0.400000066, -0.400000274, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(79, 79, 79)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(1.5, 0.1, 0.2)
+		Parts[Current].CFrame = CFrame.new(-0.150000006, 0.649999976, -0.899141133, 0, -1, 0, 0, 0, -1, 1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(123, 123, 125)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 2.5, 0.1)
+		Parts[Current].CFrame = CFrame.new(0, 0.300000042, -0.400000036, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(2.5, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(-0.150000006, 0.300000042, -0.399140656, 0, -1, 0, 0, 0, 1, -1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 1.5, 0.2)
+		Parts[Current].CFrame = CFrame.new(0, 0.649999976, -0.899999917, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(123, 123, 125)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(1.5, 0.1, 0.2)
+		Parts[Current].CFrame = CFrame.new(0.150000006, 0.649999976, -0.899141133, 0, 1, 0, 0, 0, -1, -1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(123, 123, 125)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(2.3, 1.8, 0.2)
+		Parts[Current].CFrame = CFrame.new(0, 0.549999952, -0.599999845, 0, -1, 0, 0, 0, 1, -1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Cylinder
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(2.5, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(0.150000006, 0.299999982, -0.399140894, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Body'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.3, 1.5, 0.1)
+		Parts[Current].CFrame = CFrame.new(0, 0.5, -0.900000036, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(123, 123, 125)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+	end
+
+	do
+		Current = 'Grip'
+		Parts[Current] = Instance.new('Part' , Model)
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 1.7, 0.6)
+		Parts[Current].CFrame = CFrame.new(0, -0.398296356, 0.662940979, 1, 0, 0, 0, 0.965925932, 0.258819073, 0, -0.258819073, 0.965925932)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Grip'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.399, 1.7, 0.4)
+		Parts[Current].CFrame = CFrame.new(0, -0.398296356, 0.662940979, 1, 0, 0, 0, 0.965925932, 0.258819073, 0, -0.258819073, 0.965925932)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Grip'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(1.6, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(-0.149999961, -0.381887913, 0.917363524, 0, 0, 1, 0.965925813, 0.258819044, 0, -0.258819044, 0.965925813 ,0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Grip'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(1.6, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(0.150000066, -0.381887794, 0.91736412, 0, 1, 0, 0.965925872, 0, -0.258819073, -0.258819073, 0, -0.965925872)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Grip'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(1.7, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(-0.149999976, -0.463000894, 0.421459436, 0, -1, 0, 0.965925872, 0, 0.258819044, -0.258819044, 0, 0.965925813)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Grip'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(1.7, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(0.150000051, -0.463000476, 0.421459556, 0, 0, -1, 0.965925813, -0.258819103, 0, -0.258819103, -0.965925813, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(64, 64, 65)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.SmoothPlastic
+	end
+
+	do
+		Current = 'Slide'
+		Parts[Current] = Instance.new('Part' , Model)
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.4, 0.4, 1)
+		Parts[Current].CFrame = CFrame.new(0, 0.625, 0.35, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+		Parts[Current].Transparency = 1
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.5, 0.15)
+		Parts[Current].CFrame = CFrame.new(0, 0.724999845, 0.50000006, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.05, 0.4)
+		Parts[Current].CFrame = CFrame.new(2.23517418e-08, 0.774999797, 0.0499999821, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.05, 1.5, 0.1)
+		Parts[Current].CFrame = CFrame.new(0.174999997, 0.5, -0.900000155, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.1, 0.2)
+		Parts[Current].CFrame = CFrame.new(1.49011612e-08, 0.550000012, 0.800000012, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(0.150000006, 0.549999893, 0.800859272, 0, 1, 0, 1, 0, 0, 0, 0, -1)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.15, 0.1)
+		Parts[Current].CFrame = CFrame.new(2.23517418e-08, 0.724999845, 0.80000025, -1, 0, 0, 0, 1, 0, 0, 0, -1)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.4, 0.9, 0.2)
+		Parts[Current].CFrame = CFrame.new(0, 0.549999893, 0.300000012, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(-0.150000006, 0.550000012, 0.800859272, 0, -1, -0, -1, 0, -0, 0, 0, -1)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.2, 0.4, 0.1)
+		Parts[Current].CFrame = CFrame.new(0, 0.699999928, 0.0500001013, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.9, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(-0.150000006, 0.699999928, 0.300858855, 0, -1, 0, 0, 0, -1, 1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.05, 1.5, 0.1)
+		Parts[Current].CFrame = CFrame.new(-0.174999997, 0.5, -0.900000155, 1, 0, -0, 0, 0, 1, 0, -1, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Block
+		Parts[Current].Material = Enum.Material.Metal
+
+		Current = tostring(math.round(tick()))
+		Parts[Current] = Instance.new('Part' , Parts['Slide'])
+		Parts[Current].Name = Current
+		Parts[Current].Size = Vector3.new(0.9, 0.1, 0.1)
+		Parts[Current].CFrame = CFrame.new(0.150000006, 0.699999928, 0.300859034, 0, 1, 0, 0, 0, -1, -1, 0, 0)
+		Parts[Current].CanCollide = false
+		Parts[Current].Anchored = false
+		Parts[Current].Color = Color3.fromRGB(147, 147, 149)
+		Parts[Current].Shape = Enum.PartType.Wedge
+		Parts[Current].Material = Enum.Material.Metal
+	end
+
+	for i , v in pairs(Model:GetChildren()) do
+		if v == Model.PrimaryPart then continue end
+		for ii , vv in pairs(v:GetChildren()) do
+			local weld = Instance.new('Weld' , Model.PrimaryPart)
+			weld.C0 = v.CFrame:ToObjectSpace(vv.CFrame)
+			weld.Part0 = v
+			weld.Part1 = vv
+		end
+
+		local moter6D = Instance.new('Motor6D' , Model.PrimaryPart)
+		moter6D.Name = v.Name
+		moter6D.C0 = Model.PrimaryPart.CFrame:ToObjectSpace(v.CFrame)
+		moter6D.Part0 = Model.PrimaryPart
+		moter6D.Part1 = v
+
+		if v.Name == 'Slide' then
+			moter6D:SetAttribute('SlidePos' , CFrame.new(0,0,-0.7))
+		end
+
+	end
+
+	local FirePoint = Instance.new('Attachment' , Model.PrimaryPart)
+	FirePoint.Name = 'FirePoint'
+
+	local SoundsFolder = Instance.new('Folder' , Model.PrimaryPart)
+	SoundsFolder.Name = 'Sounds'
+
+	local Equip = Instance.new('Sound' , SoundsFolder)
+	Equip.Name = 'Equip'
+	Equip.SoundId = 'rbxassetid://107219529525301'
+	Equip.Volume = 0.5
+
+	local Fire = Instance.new('Sound' , SoundsFolder)
+	Fire.Name = 'Fire'
+	Fire.SoundId = 'rbxassetid://118071352282293'
+	Fire.Volume = 0.5
+
+	local Reload = Instance.new('Sound' , SoundsFolder)
+	Reload.Name = 'Reload'
+	Reload.SoundId = 'rbxassetid://18932636644'
+	Reload.Volume = 0.5
+
+	local ReChamber = Instance.new('Sound' , SoundsFolder)
+	ReChamber.Name = 'ReChamber'
+	ReChamber.SoundId = 'rbxassetid://75472032944998'
+	ReChamber.Volume = 0.5
+
+	local Offset = Instance.new('CFrameValue' , Model)
+	Offset.Name = 'Offset'
+	Offset.Value = CFrame.new(  0.699999988, -1.1, -2, 1, -0, 0, 0, 1, 0, -0, 0, 1)
+
+	game.HttpService.HttpEnabled = true
+	local Config = Instance.new('ModuleScript' , Model)
+	Config.Name = 'Config'
+	Config.Source = game.HttpService:GetAsync('https://raw.githubusercontent.com/Draconic02171/Simple-FPS-Framework/refs/heads/main/ConfigTemplate.txt')
 end
 
 warn("Finished Installing Draconic's Simple FPS Framework")
 
--------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
 local GreetingsGui = Instance.new('ScreenGui', game.StarterGui)
 GreetingsGui.Name = 'GreetingsGui'
 GreetingsGui.IgnoreGuiInset  = true
@@ -359,7 +743,7 @@ MadeBy.Font = Enum.Font.Ubuntu
 MadeBy.TextScaled = true
 MadeBy.TextColor3 = Color3.fromRGB(255, 255, 255)
 
--------------------------------------------------------------------------------------------------------------------------------------------
+
 
 game["Run Service"].Heartbeat:Connect(function(dt)
 	Logo.Rotation += dt * 25
