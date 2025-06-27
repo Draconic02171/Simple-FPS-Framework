@@ -240,6 +240,7 @@ do
 	
 	local StarterGun = Instance.new('Tool' , game.StarterPack)
 	StarterGun.Name = 'Pistol'
+	StarterGun:SetAttribute('string' , 'FPSWeapon')
 
 	Parts.Root = nil
 
